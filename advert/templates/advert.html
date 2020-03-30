@@ -20,6 +20,13 @@
         {{ advertForm | as_bootstrap }}
           {% csrf_token %}   
 <div class="form-group col-md-12">
+    <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+
+    <li class="breadcrumb-item active" aria-current="Advert">Advert</li>
+  </ol>
+</nav>
   
         <input class=" btn btn-primary" id="submit_image_btn" name="commit" type="submit" value="submit">
     </div>
