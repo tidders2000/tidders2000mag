@@ -1,0 +1,62 @@
+{% extends 'base.html' %} 
+{% load static from staticfiles %}
+
+{% load bootstrap_tags %}
+{% block content %}
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+
+  <!-- top section -->
+  <div class="row">
+    <div class="col-12 header">
+      <img src="{% static 'images/header_image.PNG' %}" class="img-fluid hero" alt="village link">
+      
+    </div>
+    
+    
+  </div>
+  
+   <section class="features" id="features">
+     <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+    <li class="breadcrumb-item"><a href="#"onclick="goBack()">Search</a></li>
+    <li class="breadcrumb-item active" aria-current="Business">Business</li>
+  </ol>
+</nav>
+  
+ 
+<section>
+  <div class='row'>
+    <div class='col-12  detail'>
+       <h1 class='title text-center'>{{business.business_name}}</h1>
+    </div>
+    
+    <div class='col-12 col-lg-4 offset-lg-4 detail_image'>
+      <img src='../../media/{{business.advert_image}}'class='img-fluid' alt='advert'/>
+    </div>
+    <div class='col-lg-4'></div>
+       <div class='col-12 col-md-6 col-lg-3 offset-lg-1  detail'>
+        <i class="fas fa-phone-square "></i> <i class="fas fa-chevron-right"></i>  <span class='info_text' >{{business.contact_telephone}}</span>
+    </div>
+       <div class='col-12 col-md-6 col-lg-4  detail'>
+        <i class="fas fa-envelope-square "></i> <i class="fas fa-chevron-right"></i>  <span class='info_text' >{{business.contact_email}}</span>
+    </div>
+      <div class='col-12 col-md-6 col-lg-4  detail'>
+        <i class="fab fa-internet-explorer "></i> <i class="fas fa-chevron-right"></i>  <span class='info_text' >{{business.website}}</span>
+    </div>
+     <div class='col-12 detail_middle'>
+        <i class="fas fa-info "></i> <br>
+        <span class='info-slug' >{{business.info}}</span><br>
+        <span class='info-slug' >{{business.slug}}</span>
+    </div>
+    
+  </div><!--row-->
+</section>
+  
+
+    
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'base.html' %} {% load staticfiles %} {% block content %}
+<script>
+function article() {
+  window.location.replace("article/")
+}
+</script>
+<!-- hero image-->
+<div class='container-fluid'>
+  <!-- top section -->
+  <div class="row">
+    <div class="col-12 header">
+      <img src="{% static 'images/header_image.PNG' %}" class="img-fluid hero" alt="village link">
+      
+    </div>
+    </div>
+    
+   <!-- hero section -->
+    <div class="row">
+  <div class="col-sm-12 hero">
+    <img src="{% static 'images/bel_castle.jpg' %}" class="img-fluid hero" alt="Responsive image of a car">
+    <div class="centered ">
+      
+      <form action="{% url 'search_results' %}" method="get">
+        <input type='text' name='search' id='search'/><input type="submit" value="Find a Business" class="btn btn-success btn-lg go" />
+      </form>
+        
+    </div>
+  </div>
+</div>
+<!-- three boxes-->
+<section>
+  
+  <div class='row'>
+    
+    <div class='col-md-4 article__box'>
+     <img src="{% static 'images/cooking.jpg' %}" class="img-fluid hero" alt="Responsive image of cooking">
+     <p class='content'> An Interesting Article</p>
+    <button type="button" onclick="article()"class="btn btn-secondary bottom">READ</button>
+    </div>
+     <div class='col-md-4 article__box'>
+     <img src="{% static 'images/jam.jpg' %}" class="img-fluid hero" alt="Responsive image of cooking">
+      <p class='content'> An Interesting Article</p>
+    <button type="button" onclick="article()" class="btn btn-secondary bottom">READ</button>
+    </div>
+     <div class='col-md-4 article__box'>
+   <img src="{% static 'images/woodwork.jpg' %}" class="img-fluid hero" alt="Responsive image of cooking">
+    <p class='content'> An Interesting Article</p>
+    <button type="button" onclick="article()" class="btn btn-secondary bottom">READ</button>
+    </div>
+  </div>
+  
+  
+</section>
+
+
+    
+  </div><!-- container-->
+
+{% endblock %} {% block footer%}
+
+{% endblock %}

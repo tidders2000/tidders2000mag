@@ -1,0 +1,44 @@
+{% extends 'base.html' %} 
+{% load static from staticfiles %}
+
+{% load bootstrap_tags %}
+{% block content %}
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+<div class='container-fluid ad_bg'>
+  <!-- top section -->
+  <div class="row">
+    <div class="col-12 header">
+      <img src="{% static 'images/header_image.PNG' %}" class="img-fluid hero" alt="village link">
+      
+    </div>
+    
+    
+  </div>
+  
+   <section class="features" id="features">
+     <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+  
+    <li class="breadcrumb-item active" aria-current="error">error</li>
+  </ol>
+</nav>
+  
+    <div class='col-sm-12 error'>
+      
+      <p>Sorry only one advert per user. If this causes you a probel please speak to .....</p>
+    </div>
+
+
+  
+    
+    
+</div>
+
+
+    
+{% endblock %}

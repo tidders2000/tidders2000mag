@@ -1,0 +1,38 @@
+
+{% extends 'base.html' %} 
+{% load static from staticfiles %}
+
+{% load bootstrap_tags %}
+{% block content %}
+
+<div class='container-fluid'>
+<h1 class='search-title'>Search Results</h1>
+     <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="Business">Search</li>
+
+  </ol>
+</nav>
+
+<div class="row">
+    {% for ad in adverts %}
+    <!-- Team Member 1 -->
+    <div class="col-xl-3 col-md-6 mb-4">
+      <div class="card border-0 shadow">
+         <a href='{% url 'advertview' id=ad.id  %}'><img src="{{MEDIA_URL}}{{ ad.advert_image}}" class="card-img-top" alt="..."></a>
+        <div class="card-body text-center">
+          <h5 class="card-title mb-0">{{ad.business_name}}</h5>
+          <div class="card-text text-black-50">{{ad.category}}</div>
+        </div>
+      </div>
+    </div>
+    {% endfor%}
+  </div>
+  {{query1}}
+  <!-- /.row -->
+
+
+
+</div>
+{% endblock %}
