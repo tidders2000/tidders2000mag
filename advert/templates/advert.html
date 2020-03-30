@@ -6,6 +6,13 @@
 
 <div class='container-fluid'>
 <h1 class='search-title'>Add My Business</h1>
+    <nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+
+    <li class="breadcrumb-item active" aria-current="Advert">Advert</li>
+  </ol>
+</nav>
 
 <form  method="POST" id="add_advert" action="" enctype="multipart/form-data">
  <div class="form-group col-md-6 offset-md-3">
@@ -20,13 +27,7 @@
         {{ advertForm | as_bootstrap }}
           {% csrf_token %}   
 <div class="form-group col-md-12">
-    <nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
 
-    <li class="breadcrumb-item active" aria-current="Advert">Advert</li>
-  </ol>
-</nav>
   
         <input class=" btn btn-primary" id="submit_image_btn" name="commit" type="submit" value="submit">
     </div>
