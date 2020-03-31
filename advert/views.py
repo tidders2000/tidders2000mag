@@ -1,6 +1,7 @@
 from django.shortcuts import render, reverse,get_object_or_404
 from .models import Category,Advert
 from .forms import advert_form
+from django.db.models import Q 
 from django.contrib import messages
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required
@@ -35,7 +36,7 @@ def SearchResultsView(request):
     
     query = request.GET.get('search')
     
-    adverts = Advert.objects.filter(category__icontains=query)
+    adverts = Advert.objects.filter(Q (category__icontains=query  )|Q (slug__icontains=query))
     return render(request, 'search_results.html',{"adverts":adverts, 'query':query})
  
  
