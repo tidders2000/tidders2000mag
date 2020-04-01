@@ -327,3 +327,39 @@ label{
  .ad_bc{
      margin-bottom: 0!important;
  }
+ 
+ /*............................alert box.............................*/
+.alert{
+    width:80%;
+    margin-left: 10%;
+}
+
+.message{
+    width:20%;
+    margin-left: 40%;
+    min-height:150px;
+    margin-top: 5px;
+    position: fixed;
+    top:30%;
+    z-index: 1;
+    background-color:	#fffff4;
+    border-radius: 15px;
+    border:#0DA1AF 5px solid;
+    padding-left: 10px;
+    font-family: inherit;
+    font-size: 20px;
+    text-align: center;
+    color:black;
+   
+}
+
+#fade{
+    cursor: pointer;
+    font-weight: bold;
+    float: right;
+    padding:5px;
+    position: absolute;
+    bottom: 0;
+    left: 35%;
+    text-align: center;
+}
