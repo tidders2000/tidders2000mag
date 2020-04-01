@@ -21,7 +21,7 @@ function goBack() {
   
    <section class="features" id="features">
      <nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
+  <ol class="breadcrumb ad_bc">
     <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
     <li class="breadcrumb-item"><a href="#"onclick="goBack()">Search</a></li>
     <li class="breadcrumb-item active" aria-current="Business">Business</li>
@@ -29,7 +29,7 @@ function goBack() {
 </nav>
   
  
-<section>
+<section class='ad_section'>
   <div class='row'>
     <div class='col-12  detail'>
        <h1 class='title text-center'>{{business.business_name}}</h1>

@@ -1,6 +1,6 @@
 /* .................general styling................ */
 .bg_white{
-    background-color: white;
+    background-color: white!important;
 }
 .black{
    color:black;
@@ -259,6 +259,7 @@ label{
 .detail{
     color: #343A40;
     padding:0!important;
+    background-color: white;
 }
 .detail_image{
     position:relative;
@@ -295,6 +296,13 @@ label{
     font-weight: 400;
 }
 
+@media only screen and (max-width:414px) {
+  .info_text {
+      font-size:15px!important;
+  }
+}
+
+
  .detail_middle{
      text-align: center;
  } 
@@ -310,3 +318,12 @@ label{
      font-size: 10px;
  }
  
+ .ad_section{
+     background-color: white;
+     padding-top: 50px;
+     padding-bottom: 50px;
+ }
+ 
+ .ad_bc{
+     margin-bottom: 0!important;
+ }
